@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import "../vars/vars";
+@import "../breakpoints";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Kaushan Script", cursive;
+  font-weight: 300;
+  font-size: 6vw;
+  line-height: 1.5;
+  color: rgb(215, 225, 232);
+  opacity: 0.9;
+}
+
+h2 {
+  font-family: "Kaushan Script", cursive;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 3vw;
+  color: rgb(232, 243, 248);
+  opacity: 0.8;
+}
+
+h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+
+  a {
+    text-decoration: none;
+    color: rgba(22, 20, 20, 1);
+  }
+
+  a:hover,
+  a:focus {
+    color: rgb(20, 57, 95);
+    outline: none;
+  }
+}
+
+h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-top: 20px;
+}
+
+p {
+  text-align: justify;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #979797;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  height: 95vh;
+  background-image: url("../../images/imgHomePage/img/Santorini.jpeg");
+  background-size: 100% 100%;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 0 10px rgb(22, 109, 143);
+
+}
+
+.header__nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+  grid-template-rows: 1fr;
+  width: 100%;
+  justify-items: center;
+  gap: 2%;
+  padding-top: 20px;
+
+  .header__nav-first {
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-content: center;
+    align-items: center;
+
+    .header__logo {
+      display: flex;
+      flex-direction: row;
+      gap: 1%;
+
+      img {
+        width: 50px;
+      }
+
+      p {
+        color: #ffffff;
+        font-family: "Caesar Dressing", cursive;
+        font-size: 1vw;
+        font-weight: 400;
+        line-height: 1em;
+      }
+    }
+  }
+
+  .header__nav-second {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .header__nav-third {
+    display: grid;
+    grid-column: 3/4;
+    grid-row: 1/2;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .header__nav-forth {
+    display: grid;
+    grid-column: 4/5;
+    grid-row: 1/2;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .header__nav-fifth {
+    display: grid;
+    grid-column: 5/6;
+    grid-row: 1/2;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .header__nav-sixth {
+    display: grid;
+    grid-column: 6/7;
+    grid-row: 1/2;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  a:hover,
+  a:focus {
+    color: rgb(20, 57, 95);
+    outline: none;
+  }
+
+  .header__button {
+    display: grid;
+    grid-column: 7/8;
+    grid-row: 1/2;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 6vw;
+    height: 2.5vw;
+    border-radius: 7px;
+    cursor: pointer;
+    outline: none;
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5vw;
+  }
+}
+
+.header__line {
+  position: absolute;
+  top: 7%;
+  background-color: rgb(213, 216, 216);
+  opacity: 0.4;
+  height: 5px;
+  width: 100%;
+}
+
+.main-section__destinations {
+  width: 100%;
+  padding-top: 3%;
+
+  .section-head {
+    padding-left: 2%;
+  }
+
+  .section__destination {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    justify-content: center;
+    gap: 1rem;
+    padding: 20px 2% 0 2%;
+
+    img {
+      border-radius: 12px;
+      box-shadow: 10px 10px 10px rgb(107, 160, 203);
+      object-fit: cover;
+      max-width: 100%;
+    }
+  }
+
+  @media (min-width: 884px) and (max-width: 1344px) {
+    .section__destination {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-content: center;
+      gap: 1rem;
+      padding-top: 20px;
+      padding-left: 2%;
+      padding-right: 2%;
+
+      img {
+        border-radius: 12px;
+        box-shadow: 10px 10px 10px rgb(107, 160, 203);
+        object-fit: cover;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.main-section__tours {
+  padding: 3% 2% 0 2%;
+
+}
+
+.section__traveltips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: 1fr;
+  gap: 2rem;
+  padding-top: 20px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2%;
+    box-shadow: 10px 10px 10px rgb(107, 160, 203);
+  }
+
+  @media (min-width: 692px) and (max-width: 993px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.main-section__activities {
+  max-width: 100%;
+  padding: 3% 2% 0 2%;
+
+  .section__activities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 1fr;
+    justify-content: center;
+    gap: 3rem;
+    padding-top: 20px;
+
+    @media (min-width: 704px) and (max-width: 1458px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.main-section__aboutus {
+  padding: 2%;
+
+  .aboutus-section {
+    display: flex;
+    flex-direction: row;
+
+    .aboutus-text {
+      width: 100%;
+      text-align: center;
+      padding-right: 2%;
+    }
+
+    .aboutus-picture {
+      object-fit: cover;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.carousel-item {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 10px 10px 10px rgb(51, 134, 201);
+  }
+}
+
+.carousel-caption h5 {
+  color: rgb(239, 232, 232);
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+}
+
+.carousel-caption p {
+  color: rgb(236, 230, 230);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.container-fluid {
+  height: 100%;
+  background-color: rgb(178, 208, 231);
+  opacity: 0.7;
+}
+
+@include sm-d {
+  .header {
+    height: 30vh;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .form {
+    display: none;
+  }
+
+  .aboutus-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,110 @@
+@import "../vars/vars";
+@import "../breakpoints";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.firstwords {
+    border: 1px solid white;
+    display: block;
+    height: 4rem;
+    font-size: 2rem;
+    text-align: center;
+    background-color: rgb(22, 109, 143);
+    border-radius: 10px;
+    opacity: 0.3;
+
+    h3 {
+        padding-top: 0.8%;
+        color: white;
+    }
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 30% auto 30% auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 2%;
+    column-gap: 1%;
+    text-align: justify;
+    padding: 2%;
+
+    img {
+        max-width: 100%;
+        border-radius: 2%;
+        object-fit: cover;
+    }
+}
+
+.carousel-item {
+    padding-top: 30px;
+
+    img {
+        width: 100%;
+        height: 35rem;
+        object-fit: cover;
+        box-shadow: 10px 10px 10px rgb(51, 134, 201);
+    }
+}
+
+.carousel-caption h5 {
+    color: rgb(239, 232, 232);
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+}
+
+.carousel-caption p {
+    color: rgb(236, 230, 230);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.container-fluid {
+    height: 100%;
+    background-color: rgb(178, 208, 231);
+    opacity: 0.7;
+}
+
+body {
+    @include lg-d {
+        .wrapper {
+            min-height: 100%;
+            display: grid;
+            grid-template-columns: 30% 1fr;
+            grid-template-rows: repeat(6, 16%);
+            row-gap: 1%;
+            margin-top: 1%;
+            padding: 2%;
+        }
+    }
+
+    @include sm-d {
+        font-size: 0.8rem;
+
+        nav.header__nav {
+            display: grid;
+            gap: 2%;
+        }
+
+        .wrapper {
+            min-height: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(12, 1fr);
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .carousel-inner {
+            display: none;
+        }
+    }
+}

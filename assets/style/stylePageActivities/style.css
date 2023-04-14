@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.firstwords {
+  border: 1px solid white;
+  display: block;
+  height: 4rem;
+  font-size: 2rem;
+  text-align: center;
+  background-color: rgb(22, 109, 143);
+  border-radius: 10px;
+  opacity: 0.3;
+}
+.firstwords h3 {
+  padding-top: 0.8%;
+  color: white;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 30% auto 30% auto;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 2%;
+  -moz-column-gap: 1%;
+       column-gap: 1%;
+  text-align: justify;
+  padding: 2%;
+}
+.wrapper img {
+  max-width: 100%;
+  border-radius: 2%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel-inner {
+  padding-top: 2%;
+}
+
+.carousel-item {
+  padding-top: 30px;
+}
+.carousel-item img {
+  width: 100%;
+  height: 35rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 10px 10px 10px rgb(51, 134, 201);
+}
+
+.carousel-caption h5 {
+  color: rgb(239, 232, 232);
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+}
+
+.carousel-caption p {
+  color: rgb(236, 230, 230);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.container-fluid {
+  height: 100%;
+  background-color: rgb(178, 208, 231);
+  opacity: 0.7;
+}
+
+@media (max-width: 1279.8px) {
+  body .wrapper {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: repeat(8, 12%);
+    row-gap: 1%;
+    margin-top: 1%;
+    padding: 2%;
+  }
+}
+@media (max-width: 767.8px) {
+  body {
+    font-size: 0.8rem;
+  }
+  body nav.header__nav {
+    display: grid;
+    gap: 2%;
+  }
+  body .wrapper {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(16, 1fr);
+  }
+  body p {
+    font-size: 1rem;
+  }
+  body .carousel-inner {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

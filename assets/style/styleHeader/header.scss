@@ -1,0 +1,102 @@
+@import '../vars/vars';
+@import '../breakpoints';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0px 20px 0px;
+    width: 100%;
+    height: 40vh;
+    opacity: 0.9;
+    background-image: url('/assets/images/imgPageHeader/img/background.jpeg');
+    background-size: 100% 100%;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 0 10px rgb(22, 109, 143);
+
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-around;
+    width: 70vw;
+    flex-direction: row;
+
+    @include sm-d {
+        nav.header__nav {
+            display: grid;
+            gap: 2%;
+
+        }
+    }
+
+    .header__logo {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        margin-top: -2%;
+
+        img {
+            width: 40%;
+
+        }
+
+        p {
+            color: #FFFFFF;
+            font-family: 'Caesar Dressing', cursive;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1em;
+            margin-top: 10%;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: antiquewhite;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    a:hover,
+    a:focus {
+        color: rgb(20, 57, 95);
+        outline: none;
+    }
+
+    .header__button {
+        width: 85px;
+        height: 35px;
+        border-radius: 7px;
+        cursor: pointer;
+        outline: none;
+        color: #FFFFFF;
+        background: transparent;
+        border: 1px solid white;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 23px;
+        margin-left: 90px;
+        margin-top: -8px;
+    }
+
+}
+
+.header__line {
+    position: absolute;
+    top: 55px;
+    background-color: whitesmoke;
+    height: 5px;
+    width: 100%;
+}
